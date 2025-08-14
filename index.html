@@ -13,13 +13,108 @@
   </head>
   <body>
     <!-- Header -->
-    <header></header>
+    <header class="flex items-center justify-between p-[16px]">
+      <!-- logo icon -->
+      <div class="bg-gray-500 rounded-full h-[50px] w-[50px] main-logo"></div>
+
+      <nav>
+        <ul class="flex space-x-4">
+          <li>
+            <a
+              href="#home-page"
+              class="text-gray-700 border py-[4px] px-[8px] rounded-[8px] hover:text-blue"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="#our-profile"
+              class="text-grey-700 border py-[4px] px-[8px] rounded-[8px] hover:text-blue"
+              >Our Profile</a
+            >
+          </li>
+          <li>
+            <a
+              href="#portofolio"
+              class="text-grey-700 border py-[4px] px-[8px] rounded-[8px] hover:text-blue"
+              >Portofolio</a
+            >
+          </li>
+          <li>
+            <a
+              href="#message-us"
+              class="text-grey-700 border py-[4px] px-[8px] rounded-[8px] hover:text-blue"
+              >Message us</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
 
     <!-- Main -->
-    <main></main>
+    <main>
+      <!-- Home -->
+      <section id="home-page" class="h-[400px] bg-gray-100">
+        <div class="flex items-center justify-center h-full">
+          <h1 class="text-4xl font-bold text-gray-800">
+            Welcome <span id="user-greeting">User</span> To Our Portofolio
+          </h1>
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- Our Profile -->
+      <section id="our-profile" class="text-center h-[400px] bg-gray-200">
+        <header>
+          <h1 class="text-4xl font-bold text-gray-800">Our Profile</h1>
+        </header>
+        <p class="text-gray-600 mt-2">
+          We are a team of passionate developers dedicated to creating
+          innovative solutions.
+        </p>
+      </section>
+      <hr />
+      <!-- Portofolio -->
+      <section id="portofolio" class="text-center h-[400px] bg-gray-300">
+        <header>
+          <h1 class="text-4xl font-bold text-gray-800">Portofolio</h1>
+        </header>
+        <p class="text-gray-600 mt-2">
+          We are a team of passionate developers dedicated to creating
+          innovative solutions.
+        </p>
+      </section>
+      <hr />
+      <!-- Message us -->
+      <section id="message-us" class="h-[400px] bg-gray-400">
+        <header>
+          <h1 class="text-4xl font-bold text-gray-800">Message Us</h1>
+        </header>
+        <form action="">
+          <label for="user-message" class="block text-gray-700"
+            >Your Message</label
+          >
+          <input
+            id="user-message"
+            class="border rounded w-full p-2"
+            placeholder="Type your message here..."
+          />
+          <button
+            type="button"
+            onclick="sendMessage();"
+            class="mt-2 bg-blue-500 text-white py-2 px-4 rounded-md"
+          >
+            Send
+          </button>
+        </form>
+      </section>
+    </main>
 
     <!-- Footer -->
-    <footer></footer>
+    <footer>
+      <span>2025 Portofolio Aceng. All Right Reserved</span>
+    </footer>
     <!-- JS External -->
     <script src="js\script.js"></script>
   </body>
