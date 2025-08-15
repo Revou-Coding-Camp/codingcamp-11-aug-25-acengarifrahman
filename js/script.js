@@ -20,7 +20,7 @@ welcomeSpeech();
 function welcomeSpeech() {
   let userName = prompt("Please enter your name:");
   if (userName != "") {
-    document.getElementById("user-greeting").textContent = userName;
+    document.getElementById("user-greeting").textContent = " " + userName;
   }
 }
 
