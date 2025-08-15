@@ -36,3 +36,26 @@ function sendMessage() {
     alert("Please enter a message before sending.");
   }
 }
+
+// Fungsi update waktu
+function updateTime() {
+  document.getElementById("currentTime").textContent =
+    new Date().toLocaleString();
+}
+// Update awal + setiap 1 detik
+updateTime();
+setInterval(updateTime, 1000);
+
+// Fungsi untuk kirim data dari form ke preview
+function sendMessage() {
+  const nama = document.getElementById("nama").value;
+  const tanggalLahir = document.getElementById("tanggalLahir").value;
+  const gender =
+    document.querySelector('input[name="gender"]:checked')?.value || "";
+  const pesan = document.getElementById("user-message").value;
+
+  document.getElementById("prevNama").textContent = nama;
+  document.getElementById("prevTanggal").textContent = tanggalLahir;
+  document.getElementById("prevGender").textContent = gender;
+  document.getElementById("prevPesan").textContent = pesan;
+}
