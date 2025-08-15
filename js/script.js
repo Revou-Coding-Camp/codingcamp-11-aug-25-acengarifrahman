@@ -59,3 +59,14 @@ function sendMessage() {
   document.getElementById("prevGender").textContent = gender;
   document.getElementById("prevPesan").textContent = pesan;
 }
+
+if ($(".odometer").length) {
+  $(".odometer").appear();
+  $(document.body).on("appear", ".odometer", function (e) {
+    var odo = $(".odometer");
+    odo.each(function () {
+      var countNumber = $(this).attr("data-count");
+      $(this).html(countNumber);
+    });
+  });
+}

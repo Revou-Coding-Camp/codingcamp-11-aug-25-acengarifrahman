@@ -7,13 +7,19 @@
 
     <!-- CSS External -->
     <link rel="stylesheet" href="css\style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body>
     <!-- Header -->
-    <header class="flex items-center justify-between p-[16px]">
+    <header
+      class="flex items-center justify-between p-[16px] bg-gradient-to-r from-indigo-900 to-blue-900 text-white"
+    >
       <!-- logo icon -->
       <div class="bg-gray-500 rounded-full h-[50px] w-[50px] main-logo"></div>
 
@@ -22,28 +28,28 @@
           <li>
             <a
               href="#home-page"
-              class="text-gray-700 border py-[4px] px-[8px] rounded-[8px] hover:text-blue"
+              class="text-white-700 border py-[4px] px-[8px] rounded-[8px] hover:text-black"
               >Home</a
             >
           </li>
           <li>
             <a
               href="#our-profile"
-              class="text-grey-700 border py-[4px] px-[8px] rounded-[8px] hover:text-blue"
+              class="text-grey-700 border py-[4px] px-[8px] rounded-[8px] hover:text-black"
               >Our Profile</a
             >
           </li>
           <li>
             <a
               href="#portofolio"
-              class="text-grey-700 border py-[4px] px-[8px] rounded-[8px] hover:text-blue"
+              class="text-grey-700 border py-[4px] px-[8px] rounded-[8px] hover:text-black"
               >Portofolio</a
             >
           </li>
           <li>
             <a
               href="#message-us"
-              class="text-grey-700 border py-[4px] px-[8px] rounded-[8px] hover:text-blue"
+              class="text-grey-700 border py-[4px] px-[8px] rounded-[8px] hover:text-black"
               >Message us</a
             >
           </li>
@@ -119,29 +125,367 @@
         </div>
       </section>
 
-      <hr />
+      <section
+        id="our-profile"
+        class="min-h-[400px] bg-gradient-to-r from-indigo-900 to-blue-800 text-white py-12"
+      >
+        <div class="max-w-6xl mx-auto px-6">
+          <h2 class="text-4xl md:text-3xl sm:text-2xl mb-8 font-bold">
+            Our Profile
+          </h2>
 
-      <!-- Our Profile -->
-      <section id="our-profile" class="text-center h-[400px] bg-gray-200">
-        <header>
-          <h1 class="text-4xl font-bold text-gray-800">Our Profile</h1>
-        </header>
-        <p class="text-gray-600 mt-2">
-          We are a team of passionate developers dedicated to creating
-          innovative solutions.
-        </p>
+          <!-- Tabs navigation -->
+          <ul
+            class="border-b border-indigo-800 flex flex-wrap mb-10"
+            role="tablist"
+            data-te-nav-ref
+          >
+            <li role="presentation" class="mr-4">
+              <a
+                href="#tabs-about"
+                class="active block px-6 py-3 font-semibold border-b-2 border-transparent data-[te-nav-active]:border-white hover:border-white transition"
+                data-te-toggle="pill"
+                data-te-target="#tabs-about"
+                data-te-nav-active
+                role="tab"
+                aria-controls="tabs-about"
+                aria-selected="true"
+              >
+                About
+              </a>
+            </li>
+            <li role="presentation" class="mr-4">
+              <a
+                href="#tabs-skill"
+                class="block px-6 py-3 font-semibold border-b-2 border-transparent hover:border-white transition"
+                data-te-toggle="pill"
+                data-te-target="#tabs-skill"
+                role="tab"
+                aria-controls="tabs-skill"
+                aria-selected="false"
+              >
+                Skill
+              </a>
+            </li>
+            <li role="presentation" class="mr-4">
+              <a
+                href="#tabs-social"
+                class="block px-6 py-3 font-semibold border-b-2 border-transparent hover:border-white transition"
+                data-te-toggle="pill"
+                data-te-target="#tabs-social"
+                role="tab"
+                aria-controls="tabs-social"
+                aria-selected="false"
+              >
+                Social Media
+              </a>
+            </li>
+          </ul>
+
+          <!-- Tab Content -->
+          <div class="content">
+            <!-- Tab About -->
+            <div
+              class="hidden opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
+              id="tabs-about"
+              role="tabpanel"
+              data-te-tab-active
+            >
+              <p class="text-lg text-gray-300 leading-relaxed mb-4">
+                Halo! Saya <span class="font-semibold">Aceng Arif Rahman</span>,
+                seorang yang bersemangat di bidang teknologi dan administrasi.
+              </p>
+              <p class="text-lg text-gray-300 leading-relaxed mb-4">
+                Saya menguasai <span class="font-semibold">HTML</span>,
+                <span class="font-semibold">CSS</span>, dan
+                <span class="font-semibold">JavaScript</span>
+                untuk membangun tampilan web yang modern dan responsif. Selain
+                itu, saya terampil menggunakan
+                <span class="font-semibold">Microsoft Excel</span> dan
+                <span class="font-semibold">Microsoft PowerPoint</span>
+                untuk mengolah data serta membuat presentasi yang efektif.
+              </p>
+              <p class="text-lg text-gray-300 leading-relaxed mb-4">
+                Dengan pengalaman sebagai
+                <span class="font-semibold">Staff Administrasi</span> di sebuah
+                perusahaan, saya terbiasa mengelola dokumen, menyusun laporan,
+                serta mendukung kelancaran operasional tim.
+              </p>
+              <p class="text-lg text-gray-300 leading-relaxed">
+                Saya selalu terbuka untuk tantangan baru, mempelajari hal-hal
+                baru, dan berkontribusi dalam proyek yang berdampak positif.
+              </p>
+            </div>
+
+            <!-- Tab Skill -->
+            <div
+              class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
+              id="tabs-skill"
+              role="tabpanel"
+            >
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mt-8">
+                <div class="text-center">
+                  <h3 class="text-5xl font-bold text-green-400">90%</h3>
+                  <div class="w-full bg-gray-700 h-2 mt-2 rounded-full">
+                    <div
+                      class="bg-green-400 h-2 rounded-full"
+                      style="width: 90%"
+                    ></div>
+                  </div>
+                  <p class="mt-2 font-semibold">Microsoft Excel</p>
+                </div>
+
+                <div class="text-center">
+                  <h3 class="text-5xl font-bold text-blue-400">85%</h3>
+                  <div class="w-full bg-gray-700 h-2 mt-2 rounded-full">
+                    <div
+                      class="bg-blue-400 h-2 rounded-full"
+                      style="width: 85%"
+                    ></div>
+                  </div>
+                  <p class="mt-2 font-semibold">Microsoft PowerPoint</p>
+                </div>
+
+                <div class="text-center">
+                  <h3 class="text-5xl font-bold text-orange-400">80%</h3>
+                  <div class="w-full bg-gray-700 h-2 mt-2 rounded-full">
+                    <div
+                      class="bg-orange-400 h-2 rounded-full"
+                      style="width: 80%"
+                    ></div>
+                  </div>
+                  <p class="mt-2 font-semibold">HTML</p>
+                </div>
+
+                <div class="text-center">
+                  <h3 class="text-5xl font-bold text-yellow-300">75%</h3>
+                  <div class="w-full bg-gray-700 h-2 mt-2 rounded-full">
+                    <div
+                      class="bg-yellow-300 h-2 rounded-full"
+                      style="width: 75%"
+                    ></div>
+                  </div>
+                  <p class="mt-2 font-semibold">CSS</p>
+                </div>
+
+                <div class="text-center">
+                  <h3 class="text-5xl font-bold text-pink-500">70%</h3>
+                  <div class="w-full bg-gray-700 h-2 mt-2 rounded-full">
+                    <div
+                      class="bg-pink-500 h-2 rounded-full"
+                      style="width: 70%"
+                    ></div>
+                  </div>
+                  <p class="mt-2 font-semibold">JavaScript</p>
+                </div>
+
+                <div class="text-center">
+                  <h3 class="text-5xl font-bold text-red-500">85%</h3>
+                  <div class="w-full bg-gray-700 h-2 mt-2 rounded-full">
+                    <div
+                      class="bg-red-500 h-2 rounded-full"
+                      style="width: 85%"
+                    ></div>
+                  </div>
+                  <p class="mt-2 font-semibold">Problem Solving</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab social -->
+            <div
+              class="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
+              id="tabs-social"
+              role="tabpanel"
+            >
+              <div class="grid grid-cols-12 gap-8 lg:gap-3">
+                <div class="col-span-4 md:col-span-6 sm:col-span-12">
+                  <div class="flex items-center mb-[60px]">
+                    <div
+                      class="w-[130px] h-[120px] flex items-center justify-center border border-blue-400 rounded-md text-white-400 hover:bg-blue-400 hover:text-white transition text-7xl"
+                    >
+                      <i class="fa fa-facebook"></i>
+                    </div>
+                    <div class="ml-[30px]">
+                      <h2
+                        class="text-[30px] sm:text-[25px] text-[#fff] font-bold"
+                      >
+                        Facebook
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-span-4 md:col-span-6 sm:col-span-12">
+                  <div class="flex items-center mb-[60px]">
+                    <div
+                      class="w-[130px] h-[120px] flex items-center justify-center border border-[#ff8e40] text-center rounded-[10px] instagram-color text-7xl"
+                    >
+                      <i
+                        class="text-[80px] leading-[120px] sm:text-[50px] sm:leading-[90px] fa fa-instagram"
+                      ></i>
+                    </div>
+                    <div class="ml-[30px]">
+                      <h2
+                        class="text-[30px] sm:text-[25px] text-[#fff] font-bold"
+                      >
+                        Instagram
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-span-4 md:col-span-6 sm:col-span-12">
+                  <div class="flex items-center mb-[60px]">
+                    <div
+                      class="w-[130px] h-[120px] flex items-center justify-center border border-[#ff8e40] text-center rounded-[10px] instagram-color text-7xl"
+                    >
+                      <i
+                        class="text-[80px] leading-[120px] sm:text-[50px] sm:leading-[90px] fa fa-twitter"
+                      ></i>
+                    </div>
+                    <div class="ml-[30px]">
+                      <h2
+                        class="text-[30px] sm:text-[25px] text-[#fff] font-bold"
+                      >
+                        Twitter
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-span-4 md:col-span-6 sm:col-span-12">
+                  <div class="flex items-center mb-[60px]">
+                    <div
+                      class="w-[130px] h-[120px] flex items-center justify-center border border-[#ff8e40] text-center rounded-[10px] instagram-color text-7xl"
+                    >
+                      <i
+                        class="text-[80px] leading-[120px] sm:text-[50px] sm:leading-[90px] fa fa-linkedin"
+                      ></i>
+                    </div>
+                    <div class="ml-[30px]">
+                      <h2
+                        class="text-[30px] sm:text-[25px] text-[#fff] font-bold"
+                      >
+                        LinkedIn
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
-      <hr />
+
       <!-- Portofolio -->
-      <section id="portofolio" class="text-center h-[400px] bg-gray-300">
-        <header>
-          <h1 class="text-4xl font-bold text-gray-800">Portofolio</h1>
-        </header>
-        <p class="text-gray-600 mt-2">
-          We are a team of passionate developers dedicated to creating
-          innovative solutions.
-        </p>
+      <!-- Portfolio Section -->
+      <section
+        id="portofolio"
+        class="min-h-[400px] bg-gradient-to-r from-indigo-800 to-blue-900 text-white py-12"
+      >
+        <div class="max-w-6xl mx-auto px-4">
+          <!-- Section Title -->
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-white-800">My Portfolio</h2>
+            <p class="text-white-600 mt-2">
+              Some of my recent works and projects
+            </p>
+          </div>
+
+          <!-- Portfolio Grid -->
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Portfolio Card -->
+            <div
+              class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+            >
+              <img
+                src="asset\project1.PNG"
+                alt="Project 1"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-800">
+                  Web Generator Konten Film Otomatis Berbasis API TMDb
+                </h3>
+                <p class="text-gray-500 text-sm mt-1">Web Development</p>
+                <p class="text-gray-600 mt-3 text-sm">
+                  Platform web yang dirancang untuk menghasilkan konten film
+                  secara otomatis menggunakan API TMDb (The Movie Database).
+                  seperti Blogger dan WordPress.
+                </p>
+                <a
+                  href="https://s.stream4you.site/"
+                  class="inline-block mt-4 px-4 py-2 text-sm bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+                >
+                  View Details
+                </a>
+              </div>
+            </div>
+
+            <!-- Portfolio Card -->
+            <div
+              class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+            >
+              <img
+                src="asset\project2.png"
+                alt="Project 2"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-800">
+                  Landing Page Promosi Film
+                </h3>
+                <p class="text-gray-500 text-sm mt-1">UI/UX Design</p>
+                <p class="text-gray-600 mt-3 text-sm">
+                  Sebuah halaman promosi film dengan desain sinematik dan fokus
+                  pada konversi. Menggunakan visual backdrop penuh, tipografi
+                  besar, dan tombol CTA yang menonjol. Dibangun dengan HTML, CSS
+                  responsif, dan integrasi API untuk otomatisasi pengambilan
+                  data film.
+                </p>
+                <a
+                  href="https://webmovies.online"
+                  class="inline-block mt-4 px-4 py-2 text-sm bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+                >
+                  View Details
+                </a>
+              </div>
+            </div>
+
+            <!-- Portfolio Card -->
+            <div
+              class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+            >
+              <img
+                src="asset\project3.png"
+                alt="Project 3"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-xl font-semibold text-gray-800">
+                  Landing Page Sport Event
+                </h3>
+                <p class="text-gray-500 text-sm mt-1">Landing Page Design</p>
+                <p class="text-gray-600 mt-3 text-sm">
+                  Halaman promosi pertandingan olahraga dengan desain responsif
+                  dan interaktif. Menggabungkan skor langsung, jadwal
+                  pertandingan, dan tombol CTA streaming yang jelas. Dibangun
+                  dengan HTML, CSS modern, dan integrasi API olahraga untuk
+                  pembaruan data otomatis.
+                </p>
+                <a
+                  href="https://watch.webly.lol"
+                  class="inline-block mt-4 px-4 py-2 text-sm bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+                >
+                  View Details
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
+
       <hr />
       <!-- Message us -->
       <section class="bg-white-100 p-6 font-sans">
@@ -251,5 +595,10 @@
     </footer>
     <!-- JS External -->
     <script src="js\script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/tw-elements.umd.min.js"></script>
+    <script>
+      const { Tab, initTE } = window.twElements;
+      initTE({ Tab });
+    </script>
   </body>
 </html>
